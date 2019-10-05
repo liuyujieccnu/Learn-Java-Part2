@@ -16,4 +16,16 @@ public class DogServiceImpl implements DogService {
     public List<Dog> retrieveDogs(){
         return (List<Dog>) dogRepository.findAll();
     }
+
+    public List<String> retrieveDogBreed(){
+        return (List<String>) dogRepository.findAllBreed();
+    }
+
+    public String resolveDogBreedById(Long id){
+        return (String) dogRepository.findBreedById(id);
+    }
+
+    public List<String> retrieveDogNames(){
+        return (List<String>) dogRepository.findAllNames();
+    }
 }
